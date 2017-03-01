@@ -1,12 +1,12 @@
 # OmniAuth Dotloop
 
 [![Gem Version](http://img.shields.io/gem/v/omniauth-dotloop.svg)][gem]
-[![Build Status](http://img.shields.io/travis/dotloop/omniauth-dotloop.svg)][travis]
-[![Code Climate](http://img.shields.io/codeclimate/github/dotloop/omniauth-dotloop.svg)][codeclimate]
+[![Build Status](http://img.shields.io/travis/contactually/omniauth-dotloop.svg)][travis]
+[![Code Climate](http://img.shields.io/codeclimate/github/contactually/omniauth-dotloop.svg)][codeclimate]
 
 [gem]: https://rubygems.org/gems/omniauth-dotloop
-[travis]: http://travis-ci.org/dotloop/omniauth-dotloop
-[codeclimate]: https://codeclimate.com/github/dotloop/omniauth-dotloop
+[travis]: http://travis-ci.org/contactually/omniauth-dotloop
+[codeclimate]: https://codeclimate.com/github/contactually/omniauth-dotloop
 
 Gem to authenticate applications to Dotloop via OAuth2.
 

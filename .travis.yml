@@ -1,6 +1,5 @@
 # Copied from:
 # https://github.com/omniauth/omniauth/blob/master/.travis.yml
-bundler_args: --without development
 before_install: gem update bundler
 cache: bundler
 env:
@@ -13,11 +12,9 @@ rvm:
   - 2.2.6
   - 2.3.3
   - 2.4.0
-  - jruby-head
   - ruby-head
 matrix:
   allow_failures:
-    - rvm: jruby-head
     - rvm: ruby-head
   fast_finish: true
 sudo: false

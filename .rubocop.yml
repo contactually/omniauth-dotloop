@@ -33,7 +33,7 @@ Style/BracesAroundHashParameters:
 
 # Indentation of `when`.
 Style/CaseIndentation:
-  IndentWhenRelativeTo: end
+  EnforcedStyle: end
   SupportedStyles:
     - case
     - end
@@ -144,6 +144,9 @@ Style/RaiseArgs:
 
 ##################### Metrics #############################
 
+Metrics/BlockLength:
+  Enabled: false
+
 Metrics/ClassLength:
   CountComments: false  # count full line comments?
   Max: 100
@@ -152,6 +155,9 @@ Metrics/ClassLength:
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
   Max: 10
+  Enabled: false
+
+Metrics/ModuleLength:
   Enabled: false
 
 Metrics/LineLength:

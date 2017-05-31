@@ -157,10 +157,20 @@ Metrics/MethodLength:
 Metrics/LineLength:
   Max: 120
 
+Metrics/BlockLength:
+  CountComments: false
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
 ##################### Lint ################################
 
 Lint/AssignmentInCondition:
   Description: "Don't use assignment in conditions."
+  Enabled: false
+
+Lint/ScriptPermission:
   Enabled: false
 
 ##################### Performance #########################

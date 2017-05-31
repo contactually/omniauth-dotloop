@@ -1,4 +1,4 @@
-Style/AlignParameters:
+Layout/AlignParameters:
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same
@@ -32,8 +32,8 @@ Style/BracesAroundHashParameters:
     - context_dependent
 
 # Indentation of `when`.
-Style/CaseIndentation:
-  IndentWhenRelativeTo: end
+Layout/CaseIndentation:
+  EnforcedStyle: end
   SupportedStyles:
     - case
     - end
@@ -81,7 +81,7 @@ Style/HashSyntax:
     - hash_rockets
 
 # Checks the indentation of the first element in an array literal.
-Style/IndentArray:
+Layout/IndentArray:
   # The value `special_inside_parentheses` means that array literals with
   # brackets that have their opening bracket on the same line as a surrounding
   # opening round parenthesis, shall have their first element indented relative
@@ -103,7 +103,7 @@ Style/IndentArray:
   IndentationWidth: ~
 
 # Checks the indentation of the first key in a hash literal.
-Style/IndentHash:
+Layout/IndentHash:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
@@ -116,7 +116,7 @@ Style/IndentHash:
     - special_inside_parentheses
     - consistent
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
   SupportedStyles:
     - aligned
@@ -125,7 +125,7 @@ Style/MultilineMethodCallIndentation:
   # But it can be overridden by setting this parameter
   IndentationWidth: ~
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
   SupportedStyles:
     - aligned

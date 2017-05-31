@@ -1,3 +1,10 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.2
+
 Layout/AlignParameters:
   # Alignment of parameters in multi-line method calls.
   #
@@ -77,7 +84,6 @@ Style/CommandLiteral:
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
   SupportedStyles:
-    - ruby19
     - hash_rockets
 
 # Checks the indentation of the first element in an array literal.

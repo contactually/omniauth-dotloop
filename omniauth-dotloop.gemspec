@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.email         = 'api@contactually.com'
   gem.description   = 'OmniAuth OAuth2 strategy for Contactually.'
   gem.summary       = gem.description
-  gem.homepage      = 'https://github.com/dotloop/omniauth-dotloop'
+  gem.homepage      = 'https://github.com/contactually/omniauth-dotloop'
   gem.licenses      = %w(MIT)
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").collect { |f| File.basename(f) }

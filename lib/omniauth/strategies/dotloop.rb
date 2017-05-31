@@ -19,12 +19,46 @@ module OmniAuth
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid {}
+      uid { raw_info['data']['id'] }
 
       # https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema#schema-10-and-later
-      info {}
+      info do
+        prune!(
+          :email      => raw_info['data']['email'],
+          :first_name => raw_info['data']['first_name'],
+          :last_name  => raw_info['data']['last_name']
+        )
+      end
 
-      extra {}
+      extra do
+        hash = {}
+        hash['raw_info'] = raw_info
+        prune! hash
+      end
+
+      def raw_info
+        @raw_info ||= access_token.get('https://api-gateway.dotloop.com/public/v2/account').parsed || {}
+      end
+
+      protected
+
+      def build_access_token
+        options.token_params[:headers] = { 'Authorization' => basic_auth_header }
+        super
+      end
+
+      def basic_auth_header
+        "Basic #{Base64.urlsafe_encode64("#{options[:client_id]}:#{options[:client_secret]}")}"
+      end
+
+      private
+
+      def prune!(hash)
+        hash.delete_if do |_, value|
+          prune!(value) if value.is_a?(Hash)
+          value.nil? || (value.respond_to?(:empty?) && value.empty?)
+        end
+      end
     end
   end
 end

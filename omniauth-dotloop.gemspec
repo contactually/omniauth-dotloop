@@ -3,7 +3,7 @@ require File.expand_path('../lib/omniauth-dotloop/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = 'Contactually'
   gem.email         = 'api@contactually.com'
-  gem.description   = 'OmniAuth OAuth2 strategy for Contactually.'
+  gem.description   = 'OmniAuth OAuth2 strategy for Dotloop.'
   gem.summary       = gem.description
   gem.homepage      = 'https://github.com/contactually/omniauth-dotloop'
   gem.licenses      = %w(MIT)

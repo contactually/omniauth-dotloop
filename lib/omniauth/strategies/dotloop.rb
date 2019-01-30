@@ -25,6 +25,14 @@ module OmniAuth
       info {}
 
       extra {}
+
+      private
+
+      # Overriding this method provided by OmniAuth::Strategies - we don't want the querystring appended to the callback_url
+      # See https://github.com/omniauth/omniauth-oauth2/issues/81
+      def callback_url
+        full_host + script_name + callback_path
+      end
     end
   end
 end
